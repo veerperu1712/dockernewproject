@@ -1,28 +1,25 @@
 version: '3.8'
 services:
   movies:
-  image: veerperu1712/paytmmovies:latest
-  ports:
-    - "81:80"
-  deploy:
-    replicas: 3
-
+    image: veerperu1712/paytmmovies:latest
+    ports:
+      - "81:80"
+    deploy:
+      replicas: 3
   train:
     image: veerperu1712/paytmtrain:latest
     ports:
       - "82:80"
     deploy:
       replicas: 3
-
-  recharge:
-    image: veerperu1712/paytmrecharge:latest
+  dth:
+    image: veerperu1712/paytmdth:latest
     ports:
       - "83:80"
     deploy:
       replicas: 3
-
-  dth:
-    image: veerperu1712/paytmdth:latest
+  recharge:
+    image: veerperu1712/paytmrecharge:latest
     ports:
       - "84:80"
     deploy:
